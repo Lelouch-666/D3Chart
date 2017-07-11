@@ -1,3 +1,8 @@
+/**
+ * Created by yaliu on 8/19/2016.
+ * This function will return a realtimeBarChart.
+ * You need pass the unique ID of the chart and specify the chart settings in options.
+ */
 function BarChart(chart_id,options){
     var _self = this;//always point to the chart
 
@@ -44,7 +49,7 @@ function BarChart(chart_id,options){
                     "translate(" + _self.margin.left + "," + _self.margin.top + ")");
             //create chart title
         _self.svg.append("text")
-                .attr("class", "title")
+                .attr("class", "chart-title")
                 .attr("x", _self.width/2)
                 .attr("y", 0 - (_self.margin.top / 2))
                 .attr("text-anchor", "middle")
@@ -137,3 +142,4 @@ function BarChart(chart_id,options){
         .drawAxis();
     return _self;
 };
+
